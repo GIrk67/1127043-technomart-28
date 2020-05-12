@@ -1,7 +1,7 @@
 # Личный проект «Техномарт»
 
-* Студент: [Ирина Гусева](https://up.htmlacademy.ru/htmlcss/28/user/1127043).
-* Наставник: `Неизвестно`.
+- Студент: [Ирина Гусева](https://up.htmlacademy.ru/htmlcss/28/user/1127043).
+- Наставник: [Ирина Малиновская](https://htmlacademy.ru/profile/irina-malinovskaya).
 
 ---
 
