@@ -5,9 +5,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HTML Academy: Техномарт. Каталог.</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body style="background-color: lightgrey;">
+<body>
   <header class="header">
     <section class="header__top-menu top-menu">
       <div class="container">
@@ -17,7 +18,7 @@
         </a>
         <form class="top-menu__form form-search" action="https://echo.htmlacademy.ru/" method="GET">
           <label class="form-search__label" for="search">
-            <input class="form-search__input" type="text" name="search" placeholder="Поиск:"></label>
+            <input class="form-search__input" type="search" name="search" placeholder="Поиск:"></label>
         </form>
         <a href="" class="top-menu__bookmarks">Закладки: 0</a>
         <a href="" class="top-menu__basket top-menu__basket-users">Корзина: 10</a>
@@ -65,43 +66,43 @@
 
       <form class="inner-page__filters filters" method="GET" action="https://echo.htmlacademy.ru">
         <h3 class="filters__title">Фильтр:</h3>
-        <fieldset class="filters__price price">
-          <legend class="price__title">Цена:</legend>
+        <fieldset class="filters__set price">
+          <legend class="filters__name">Цена:</legend>
           <div class="price__control">
             <div class="price__bar"></div>
           </div>
           <label class="price__min" for=""><input type="text"></label> -
           <label class="price__max" for=""><input type="text"></label>
         </fieldset>
-        <fieldset>
-          <legend>Производители:</legend>
+        <fieldset class="filters__set">
+          <legend class="filters__name">Производители:</legend>
           <ul>
             <li>
-              <label for="">Bosch</label>
-              <input type="text"></li>
+              <label for="filter-bosch">Bosch</label>
+              <input type="checkbox" name="bosch" id="filter-bosch" checked></li>
             <li>
-              <label for="">Интерскол</label>
-              <input type="text"></li>
+              <label for="filter-interskol">Интерскол</label>
+              <input type="checkbox" name="interskol" id="filter-interskol"></li>
             <li>
-              <label for="">Makita</label>
-              <input type="text"></li>
+              <label for="filter-makita">Makita</label>
+              <input type="checkbox" name="makita" id="filter-makita" checked></li>
             <li>
-              <label for="">Dewalt</label>
-              <input type="text"></li>
+              <label for="filter-dewalt">Dewalt</label>
+              <input type="checkbox" name="dewalt" id="filter-dewalt"></li>
             <li>
-              <label for="">Hitachi</label>
-              <input type="text"></li>
+              <label for="filter-hitachi">Hitachi</label>
+              <input type="checkbox" name="hitachi" id="filter-hitachi"></li>
           </ul>
         </fieldset>
-        <fieldset>
-          <legend>Питание:</legend>
+        <fieldset class="filters__set">
+          <legend class="filters__name">Питание:</legend>
           <ul>
             <li>
-              <label for="">Аккумуляторные</label>
-              <input type="text"></li>
+              <label for="battery">Аккумуляторные</label>
+              <input type="radio" name="power" id="battery" checked></li>
             <li>
-              <label for="">Сетевые</label>
-              <input type="text"></li>
+              <label for="electronet">Сетевые</label>
+              <input type="radio" name="power" id="electronet"></li>
           </ul>
         </fieldset>
         <button type="submit">Показать</button>
@@ -110,12 +111,12 @@
       <section class="inner-page__products products">
         <fieldset class="products__sorted">
           <legend>Сортировка:</legend>
-          <ul>
-            <li>по цене</li>
-            <li>по типу</li>
-            <li>по функционалу</li>
-            <li>по возрастанию</li>
-            <li>по убыванию</li>
+          <ul class="products__sorted-list">
+            <li class="products__sorted-item">по цене</li>
+            <li class="products__sorted-item">по типу</li>
+            <li class="products__sorted-item">по функционалу</li>
+            <li class="products__sorted-item products__sorted-item--active">по возрастанию</li>
+            <li class="products__sorted-item">по убыванию</li>
           </ul>
         </fieldset>
         <h2 class="products__title">Список перфораторов</h2>
@@ -129,8 +130,8 @@
             </div>
             <p class="product__old-price">30500 р.</p>
             <button class="product__price" type="button">25500 р.</button>
-            <button type="button">Купить</button>
-            <button type="button">В закладки</button>
+            <button class="product__basket" type="button">Купить</button>
+            <button class="product__marker" type="button">В закладки</button>
           </li>
           <li class="product__item">
             <a class="product__link" href="product.html">
@@ -141,8 +142,8 @@
             </div>
             <p class="product__old-price">30500 р.</p>
             <button class="product__price" type="button">25500 р.</button>
-            <button type="button">Купить</button>
-            <button type="button">В закладки</button>
+            <button class="product__basket" type="button">Купить</button>
+            <button class="product__marker" type="button">В закладки</button>
           </li>
           <li class="product__item product__item--new">
             <a class="product__link" href="product.html">
@@ -153,8 +154,8 @@
             </div>
             <p class="product__old-price">30500 р.</p>
             <button class="product__price" type="button">25500 р.</button>
-            <button type="button">Купить</button>
-            <button type="button">В закладки</button>
+            <button class="product__basket" type="button">Купить</button>
+            <button class="product__marker" type="button">В закладки</button>
           </li>
           <li class="product__item product__item--new">
             <a class="product__link" href="product.html">
@@ -165,8 +166,8 @@
             </div>
             <p class="product__old-price">22500 р.</p>
             <button class="product__price" type="button">15500 р.</button>
-            <button type="button">Купить</button>
-            <button type="button">В закладки</button>
+            <button class="product__basket" type="button">Купить</button>
+            <button class="product__marker" type="button">В закладки</button>
           </li>
           <li class="product__item">
             <a class="product__link" href="product.html">
@@ -177,8 +178,8 @@
             </div>
             <p class="product__old-price">30500 р.</p>
             <button class="product__price" type="button">25500 р.</button>
-            <button type="button">Купить</button>
-            <button type="button">В закладки</button>
+            <button class="product__basket" type="button">Купить</button>
+            <button class="product__marker" type="button">В закладки</button>
           </li>
           <li class="product__item product__item--new">
             <a class="product__link" href="product.html">
@@ -189,8 +190,8 @@
             </div>
             <p class="product__old-price product__old-price--hidden">30500 р.</p>
             <button class="product__price" type="button">12500 р.</button>
-            <button type="button">Купить</button>
-            <button type="button">В закладки</button>
+            <button class="product__basket" type="button">Купить</button>
+            <button class="product__marker" type="button">В закладки</button>
           </li>
           <li class="product__item product__item--new">
             <a class="product__link" href="product.html">
@@ -201,8 +202,8 @@
             </div>
             <p class="product__old-price">22500 р.</p>
             <button class="product__price" type="button">15500 р.</button>
-            <button type="button">Купить</button>
-            <button type="button">В закладки</button>
+            <button class="product__basket" type="button">Купить</button>
+            <button class="product__marker" type="button">В закладки</button>
           </li>
           <li class="product__item">
             <a class="product__link" href="product.html">
@@ -213,8 +214,8 @@
             </div>
             <p class="product__old-price">30500 р.</p>
             <button class="product__price" type="button">25500 р.</button>
-            <button type="button">Купить</button>
-            <button type="button">В закладки</button>
+            <button class="product__basket" type="button">Купить</button>
+            <button class="product__marker" type="button">В закладки</button>
           </li>
           <li class="product__item product__item--new">
             <a class="product__link" href="product.html">
@@ -225,18 +226,19 @@
             </div>
             <p class="product__old-price product__old-price--hidden">30500 р.</p>
             <button class="product__price" type="button">12500 р.</button>
-            <button type="button">Купить</button>
-            <button type="button">В закладки</button>
+            <button class="product__basket" type="button">Купить</button>
+            <button class="product__marker" type="button">В закладки</button>
           </li>
         </ul>
         <ul class="products__pagination pagination">
-          <li class="pagination__item"><a class="pagination__link">1</a></li>
+          <li class="pagination__item"><a class="pagination__link pagination__link--current">1</a></li>
           <li class="pagination__item"><a class="pagination__link" href="">2</a></li>
           <li class="pagination__item"><a class="pagination__link" href="">3</a></li>
           <li class="pagination__item"><a class="pagination__link" href="">Следующая</a></li>
         </ul>
       </section>
     </div>
+
     <section class="inner-page__seo">
       <div class="container">
         <h2 class="inner-page__words-title">Пара слов о перфораторах</h2>
