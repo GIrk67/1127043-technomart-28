@@ -333,14 +333,25 @@
     </section>
   </footer>
 
-  <section class="popup popup__write-us">
+  <section class="popup popup__write">
     <h2 class="visually-hidden">Форма обратной связи</h2>
-    <form action="">
-      <label for="">Ваше имя:</label>
-      <label for="">Ваш e-mail:</label>
-      <label for="">Текст письма:</label>
+    <form class="popup__write-form" class="" action="https://echo.htmlacademy.ru" method="GET">
+      <div>
+        <label class="popup__write-label" for="your-name">Ваше имя:</label>
+        <input class="popup__write-input" type="text" id="your-name" placeholder="Имя Фамилия" required>
+      </div>
+      <div>
+        <label class="popup__write-label" for="your-email">Ваш e-mail:</label>
+        <input class="popup__write-input" type="email" id="your-email" placeholder="email@example.com">
+      </div>
+      <div>
+        <label class="popup__write-label" for="write-text">Текст письма:</label>
+        <textarea class="popup__write-text" name="message" id="write-text" placeholder="В свободной форме"></textarea>
+      </div>
       <button type="submit">Оформить заказ</button>
     </form>
+    <button class="popup__write-close popup__button-close" type="button"><span class="visually-hidden">Закрыть
+        окно</span></button>
   </section>
 
   <section class="popup popup__map">
@@ -348,6 +359,8 @@
     <div>
       <img src="img/big-map.png" width="943" height="449" alt="Карта расположения нашего офиса">
     </div>
+    <button class="popup__map-close popup__button-close" type="button"><span class="visually-hidden">Закрыть
+        окно</span></button>
   </section>
 
 </body>

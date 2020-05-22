@@ -74,35 +74,35 @@
           <label class="price__min" for=""><input type="text"></label> -
           <label class="price__max" for=""><input type="text"></label>
         </fieldset>
-        <fieldset class="filters__set">
+        <fieldset class="filters__set brands">
           <legend class="filters__name">Производители:</legend>
-          <ul>
-            <li>
-              <label for="filter-bosch">Bosch</label>
-              <input type="checkbox" name="bosch" id="filter-bosch" checked></li>
-            <li>
-              <label for="filter-interskol">Интерскол</label>
-              <input type="checkbox" name="interskol" id="filter-interskol"></li>
-            <li>
-              <label for="filter-makita">Makita</label>
-              <input type="checkbox" name="makita" id="filter-makita" checked></li>
-            <li>
-              <label for="filter-dewalt">Dewalt</label>
-              <input type="checkbox" name="dewalt" id="filter-dewalt"></li>
-            <li>
-              <label for="filter-hitachi">Hitachi</label>
-              <input type="checkbox" name="hitachi" id="filter-hitachi"></li>
+          <ul class="brands__list">
+            <li class="brands__item">
+              <label class="brands__label" for="brand-bosch">Bosch</label>
+              <input class="brands__input" type="checkbox" name="bosch" id="brand-bosch" checked></li>
+            <li class="brands__item">
+              <label class="brands__label" for="brand-interskol">Интерскол</label>
+              <input class="brands__input" type="checkbox" name="interskol" id="brand-interskol"></li>
+            <li class="brands__item">
+              <label class="brands__label" for="brand-makita">Makita</label>
+              <input class="brands__input" type="checkbox" name="makita" id="brand-makita" checked></li>
+            <li class="brands__item">
+              <label class="brands__label" for="brand-dewalt">Dewalt</label>
+              <input class="brands__input" type="checkbox" name="dewalt" id="brand-dewalt"></li>
+            <li class="brands__item">
+              <label class="brands__label" for="brand-hitachi">Hitachi</label>
+              <input class="brands__input" type="checkbox" name="hitachi" id="brand-hitachi"></li>
           </ul>
         </fieldset>
-        <fieldset class="filters__set">
+        <fieldset class="filters__set power">
           <legend class="filters__name">Питание:</legend>
-          <ul>
-            <li>
-              <label for="battery">Аккумуляторные</label>
-              <input type="radio" name="power" id="battery" checked></li>
-            <li>
-              <label for="electronet">Сетевые</label>
-              <input type="radio" name="power" id="electronet"></li>
+          <ul class="power__list">
+            <li class="power__item">
+              <label class="power__label" for="battery">Аккумуляторные</label>
+              <input class="power__input" type="radio" name="power" id="battery" value="Аккумуляторные" checked></li>
+            <li class="power__item">
+              <label class="power__label" for="electronet">Сетевые</label>
+              <input class="power__input" type="radio" name="power" id="electronet" value="Сетевые"></li>
           </ul>
         </fieldset>
         <button type="submit">Показать</button>
@@ -110,15 +110,19 @@
 
       <section class="inner-page__products products">
         <fieldset class="products__sorted">
-          <legend>Сортировка:</legend>
-          <ul class="products__sorted-list">
-            <li class="products__sorted-item">по цене</li>
-            <li class="products__sorted-item">по типу</li>
-            <li class="products__sorted-item">по функционалу</li>
-            <li class="products__sorted-item products__sorted-item--active">по возрастанию</li>
-            <li class="products__sorted-item">по убыванию</li>
+          <legend class="products__sorted-title">Сортировка:</legend>
+          <ul class="products__sorted-list option">
+            <li class="option__item"><a class="option__link option__link--active" href="">по
+                цене</a></li>
+            <li class="option__item"><a class="option__link" href="">по типу</a></li>
+            <li class="option__item"><a class="option__link" href="">по функционалу</a></li>
           </ul>
+          <div class="products__choice">
+            <a class="products__choice-link products__choice-link--up" href="">по возрастанию</a>
+            <a class="products__choice-link products__choice-link--downs" href="">по убыванию</a>
+          </div>
         </fieldset>
+
         <h2 class="products__title">Список перфораторов</h2>
         <ul class="products__list product">
           <li class="product__item">
@@ -207,7 +211,7 @@
           </li>
           <li class="product__item">
             <a class="product__link" href="product.html">
-              <h3>Перфоратор BOSCH BFG 6000</h3>
+              Перфоратор BOSCH BFG 6000
             </a>
             <div class="product__preview">
               <img src="img/snippet-945.jpg" width="144" height="128" alt="Перфоратор BOSCH BFG 6000">
@@ -315,6 +319,17 @@
       </div>
     </section>
   </footer>
+
+  <section class="popup popup__basket">
+    <h2 class="popup__basket-title">Товар добавлен в корзину!</h2>
+    <div class="popup__basket-button">
+      <button class="popup__basket-order" type="submit">Оформить заказ</button>
+      <button class="popup__basket-continue" type="button">Продолжить покупки</button>
+    </div>
+    <button class="popup__basket-close popup__button-close" type="button"><span class="visually-hidden">Закрыть
+        окно</span></button>
+  </section>
+
 </body>
 
 </html>
