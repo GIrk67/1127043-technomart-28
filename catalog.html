@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
+<body class="page-body inner-body">
   <header class="header">
     <section class="header__top-menu top-menu">
       <div class="container">
@@ -21,12 +21,17 @@
               alt="Логотип магазина «Техномарт»">
           </a>
           <form class="top-menu__form form-search" action="https://echo.htmlacademy.ru/" method="GET">
-            <label class="form-search__label" for="search">
-              <input class="form-search__input" type="search" name="search" placeholder="Поиск:"><span
-                class="visually-hidden">Поле поиска</span></label>
+            <input class="form-search__input" type="search" name="search" id="search-field" placeholder="Поиск:">
+            <label class="form-search__label" for="search-field">
+              <svg class="form-search__icon" width="17" height="17" viewBox="0 0 17 17"
+                xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M13.458 12.044L17 15.586L15.586 17L12.044 13.458C10.782 14.421 9.21 15 7.5 15C3.35786 15 0 11.6421 0 7.5C0 3.35786 3.35786 0 7.5 0C11.6421 0 15 3.35786 15 7.5C15.0001 9.14309 14.4581 10.7403 13.458 12.044ZM7.5 2C4.467 2 2 4.467 2 7.5C2.00331 10.5362 4.4638 12.9967 7.5 13C10.532 13 13 10.532 13 7.5C13 4.467 10.532 2 7.5 2Z" />
+              </svg><span class="visually-hidden">Поиск по сайту</span>
+            </label>
           </form>
           <a href="" class="top-menu__link top-menu__link--bookmarks">Закладки: 0</a>
-          <a href="" class="top-menu__link top-menu__link--basket-users">Корзина: 10</a>
+          <a href="" class="top-menu__link top-menu__link--basket top-menu__link--basket-users">Корзина: 10</a>
           <a href="" class="top-menu__link top-menu__link--order" href="blank.html">Оформить заказ</a>
         </div>
       </div>
@@ -42,7 +47,7 @@
             <a class="contacts-header__phone" href="tel:+78125550555">+7 (812) 555-05-55</a>
             <p class="contacts-header__adress">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
           </div>
-          <ul class="main-menu__sector main-menu__user-list entrance">
+          <ul class="main-menu__sector entrance">
             <li class="entrance__item entrance__item--login"><a class="entrance__link entrance__link--login"
                 href="">Равшан Джамшутович</a></li>
             <li class="entrance__item entrance__item--orders"><a class="entrance__link" href="">Мои заказы</a></li>
@@ -220,7 +225,7 @@
                 Перфоратор BOSCH BFG 6000
               </a>
               <div class="product__preview">
-                <img src="img/snippet-18927.jpg" width="127" height="112" alt="Перфоратор BOSCH BFG 2000">
+                <img src="img/snippet-18927.jpg" width="127" height="112" alt="Перфоратор BOSCH BFG 6000">
               </div>
               <p class="product__old-price product__old-price--hidden">30500 р.</p>
               <button class="product__price" type="button">12500 р.</button>
@@ -256,7 +261,7 @@
                 Перфоратор BOSCH BFG 6000
               </a>
               <div class="product__preview">
-                <img src="img/snippet-18927.jpg" width="144" height="128" alt="Перфоратор BOSCH BFG 2000">
+                <img src="img/snippet-18927.jpg" width="127" height="112" alt="Перфоратор BOSCH BFG 6000">
               </div>
               <p class="product__old-price product__old-price--hidden">30500 р.</p>
               <button class="product__price" type="button">12500 р.</button>
