@@ -124,10 +124,10 @@
               </div>
               <div class="price__controls">
                 <label class="price__min">
-                  <input type="number" name="min-price" value="0">
+                  <input type="text" name="min-price" min="0" max="15000" step="500" value="0">
                 </label> &ndash;
                 <label class="price__max">
-                   <input type="number" name="max-price" value="15000">
+                  <input type="text" name="max-price" min="10000" max="35000" step="500" value="15000">
                 </label>
               </div>
             </div>
@@ -135,32 +135,35 @@
           <fieldset class="filters__set brands">
             <legend class="filters__name">Производители:</legend>
             <ul class="brands__list">
-              <li class="brands__item">
-                <label class="brands__label" for="brand-bosch">Bosch</label>
-                <input class="brands__input" type="checkbox" name="bosch" id="brand-bosch" checked></li>
-              <li class="brands__item">
-                <label class="brands__label" for="brand-interskol">Интерскол</label>
-                <input class="brands__input" type="checkbox" name="interskol" id="brand-interskol"></li>
-              <li class="brands__item">
+              <li class="filters__item brands__item">
+                <input class="visually-hidden brands__input" type="checkbox" name="bosch" id="brand-bosch" checked>
+                <label class="brands__label" for="brand-bosch">Bosch</label></li>
+              <li class="filters__item brands__item">
+                <input class="visually-hidden brands__input" type="checkbox" name="interskol" id="brand-interskol">
+                <label class="brands__label" for="brand-interskol">Интерскол</label></li>
+              <li class="filters__item brands__item">
+                <input class="visually-hidden brands__input" type="checkbox" name="makita" id="brand-makita" checked>
                 <label class="brands__label" for="brand-makita">Makita</label>
-                <input class="brands__input" type="checkbox" name="makita" id="brand-makita" checked></li>
-              <li class="brands__item">
-                <label class="brands__label" for="brand-dewalt">Dewalt</label>
-                <input class="brands__input" type="checkbox" name="dewalt" id="brand-dewalt"></li>
-              <li class="brands__item">
-                <label class="brands__label" for="brand-hitachi">Hitachi</label>
-                <input class="brands__input" type="checkbox" name="hitachi" id="brand-hitachi"></li>
+              </li>
+              <li class="filters__item brands__item">
+                <input class="visually-hidden brands__input" type="checkbox" name="dewalt" id="brand-dewalt">
+                <label class="brands__label" for="brand-dewalt">Dewalt</label></li>
+              <li class="filters__item brands__item">
+                <input class="visually-hidden brands__input" type="checkbox" name="hitachi" id="brand-hitachi">
+                <label class="brands__label" for="brand-hitachi">Hitachi</label></li>
             </ul>
           </fieldset>
           <fieldset class="filters__set power">
             <legend class="filters__name">Питание:</legend>
             <ul class="power__list">
-              <li class="power__item">
-                <label class="power__label" for="battery">Аккумуляторные</label>
-                <input class="power__input" type="radio" name="power" id="battery" value="Аккумуляторные" checked></li>
-              <li class="power__item">
+              <li class="filters__item power__item">
+                <input class="visually-hidden power__input" type="radio" name="power" id="battery"
+                  value="Аккумуляторные" checked>
+                <label class="power__label" for="battery">Аккумуляторные</label></li>
+              <li class="filters__item power__item">
+                <input class="visually-hidden power__input" type="radio" name="power" id="electronet" value="Сетевые">
                 <label class="power__label" for="electronet">Сетевые</label>
-                <input class="power__input" type="radio" name="power" id="electronet" value="Сетевые"></li>
+              </li>
             </ul>
           </fieldset>
           <button class="filters__button" type="submit">Показать</button>
@@ -411,13 +414,13 @@
     </section>
   </footer>
 
-  <section class="popup popup__basket">
-    <h2 class="popup__basket-title">Товар добавлен в корзину!</h2>
-    <div class="popup__basket-button">
-      <button class="popup__basket-order" type="submit">Оформить заказ</button>
-      <button class="popup__basket-continue" type="button">Продолжить покупки</button>
+  <section class="modal modal__basket">
+    <h2 class="modal__basket-title">Товар добавлен в корзину!</h2>
+    <div class="modal__basket-button">
+      <button class="button modal__basket-order" type="submit">Оформить заказ</button>
+      <button class="button modal__basket-continue" type="button">Продолжить покупки</button>
     </div>
-    <button class="popup__basket-close popup__button-close" type="button"><span class="visually-hidden">Закрыть
+    <button class="modal__basket-close modal__button-close" type="button"><span class="visually-hidden">Закрыть
         окно</span></button>
   </section>
 

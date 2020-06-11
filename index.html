@@ -85,13 +85,31 @@
           <h3 class="promo__title">Техника</h3>
           <a class="promo__button" href="">Для стройки</a>
         </div>
-        <div class="promo__segment promo__slider">
-          <h3 class="promo__slider-title">Перфораторы</h3>
-          <p class="promo__slider-text">Настоящие мужские игрушки</p>
-          <div>
-            <!-- слайд -->
+        <div class="promo__segment promo__slider promo__slider--1">
+          <ul class="promo__slider-list">
+            <li class="promo__slider-item slide slide--current">
+              <div class="slide__wrapper">
+                <h3 class="promo__slider-title">Перфораторы</h3>
+                <p class="promo__slider-text">Настоящие мужские игрушки</p>
+                <a class="button promo__slider-button" href="catalog.html">Открыть каталог</a>
+              </div>
+            </li>
+            <li class="promo__slider-item slide">
+              <div class="slide__wrapper">
+                <h3 class="promo__slider-title">Дрели</h3>
+                <p class="promo__slider-text">Соседям на радость!</p>
+                <a class="button promo__slider-button" href="catalog.html">Открыть каталог</a>
+              </div>
+            </li>
+          </ul>
+          <div class="slider__controls">
+            <button class="slider__controls-current" type="button" aria-label="Первый слайд"></button>
+            <button type="button" aria-label="Второй слайд"></button>
           </div>
-          <a class="button promo__slider-button" href="catalog.html">Открыть каталог</a>
+          <div class="slider__arrows">
+            <button class="slider__arrows-left" type="button" aria-label="Слайд влево"></button>
+            <button class="slider__arrows-right" type="button" aria-label="Слайд вправо"></button>
+          </div>
         </div>
         <div class="promo__segment promo__segment--discounts">
           <h3 class="promo__title">Скидки 50%</h3>
@@ -297,9 +315,9 @@
         <section class="main-page__contacts contacts">
           <h2 class="contacts__title">Контакты</h2>
           <p class="contacts__text">Вы можете забрать товар сами,<br /> заехав в наш офис:</p>
-          <div class="contacts__image">
-            <img class="contacts__map-img" src="img/map.png" width="300" height="158" alt="Карта расположения офиса">
-          </div>
+          <a class="contacts__image" href="">
+            <img src="img/map.png" width="300" height="158" alt="Карта расположения офиса">
+          </a>
           <a class="button contacts__button" href="">Заблудились? Напишите нам!</a>
         </section>
       </div>
@@ -371,34 +389,40 @@
     </section>
   </footer>
 
-  <section class="popup popup__write">
+  <section class="modal modal__write">
     <h2 class="visually-hidden">Форма обратной связи</h2>
-    <form class="popup__write-form" class="" action="https://echo.htmlacademy.ru" method="GET">
-      <div>
-        <label class="popup__write-label" for="your-name">Ваше имя:</label>
-        <input class="popup__write-input" type="text" id="your-name" placeholder="Имя Фамилия" required>
+    <form class="modal__write-form" class="" action="https://echo.htmlacademy.ru" method="GET">
+      <div class="modal__form-wrapper">
+        <div class="modal__form-item">
+          <label class="modal__write-label" for="your-name">Ваше имя:</label>
+          <input class="modal__write-input" type="text" id="your-name" placeholder="Имя Фамилия" required>
+        </div>
+        <div class="modal__form-item">
+          <label class="modal__write-label" for="your-email">Ваш e-mail:</label>
+          <input class="modal__write-input" type="email" id="your-email" placeholder="email@example.com">
+        </div>
+        <div class="modal__form-item">
+          <label class="modal__write-label" for="write-text">Текст письма:</label>
+          <textarea class="modal__write-text" name="message" id="write-text" placeholder="В свободной форме"></textarea>
+        </div>
       </div>
-      <div>
-        <label class="popup__write-label" for="your-email">Ваш e-mail:</label>
-        <input class="popup__write-input" type="email" id="your-email" placeholder="email@example.com">
+      <div class="modal__button-wrapper">
+        <button class="button modal__button-write" type="submit">Отправить</button>
       </div>
-      <div>
-        <label class="popup__write-label" for="write-text">Текст письма:</label>
-        <textarea class="popup__write-text" name="message" id="write-text" placeholder="В свободной форме"></textarea>
-      </div>
-      <button type="submit">Оформить заказ</button>
     </form>
-    <button class="popup__write-close popup__button-close" type="button"><span class="visually-hidden">Закрыть
+    <button class="modal__write-close modal__button-close" type="button"><span class="visually-hidden">Закрыть
         окно</span></button>
   </section>
 
-  <section class="popup popup__map">
+  <section class="modal modal__map">
     <h2 class="visually-hidden">Карта расположения нашего офиса</h2>
-    <div>
-      <img src="img/big-map.png" width="943" height="449" alt="Карта расположения нашего офиса">
-    </div>
-    <button class="popup__map-close popup__button-close" type="button"><span class="visually-hidden">Закрыть
+    <button class="modal__map-close modal__button-close" type="button"><span class="visually-hidden">Закрыть
         окно</span></button>
+    <div class="modal__map-link">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1223.2170949954987!2d30.323266364976924!3d59.93822633174437!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2s!4v1591906806308!5m2!1sru!2s"
+        width="943" height="449" frameborder="0" allowfullscreen="" aria-hidden="false" tabindex="0"><iframe>
+    </div>
   </section>
 
 </body>
