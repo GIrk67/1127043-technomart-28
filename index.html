@@ -251,40 +251,41 @@
       <div class="container">
         <h2 class="servises__title">Сервисы</h2>
         <p class="servises__text">
-          Хороший интернет-магазин отличается от плохого не только ценами!
+          Хороший интернет-магазин отличается от плохого не только ценами!<br>
           Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.
         </p>
-        <div>
-          <label for="slider-delivery">Доставка</label>
-          <input type="radio" id="slider-delivery" name="servises">
-          <label for="slider-guarantees">Гарантия</label>
-          <input type="radio" id="slider-guarantees" name="servises">
-          <label for="slider-kredit">Кредит</label>
-          <input type="radio" id="slider-kredit" name="servises">
-        </div>
-        <!-- Здесь слайдер -->
-        <div class="servises__delivery slider">
-          <h3 class="slider__title">Доставка</h3>
-          <p class="slider__text">
-            Мы с удовольствием доставим ваш товар прямо
-            к вашему подъезду совершенно бесплатно!
-            Ведь мы неплохо заработаем,
-            поднимая его на ваш этаж!
-          </p>
-        </div>
-        <div class="servises__guarantees slider">
-          <h3 class="slider__title">Гарантия</h3>
-          <p class="slider__text">
-            Если купленный у нас товар поломается или заискрит, а также в случае пожара, спровоцированного его
-            возгоранием, вы всегда можете быть уверены в нашей гарантии. Мы обменяем сгоревший товар на новый. Дом уж
-            восстановите как-нибудь сами.
-          </p>
-        </div>
-        <div class="servises__kredit slider">
-          <h3 class="slider__title">Кредит</h3>
-          <p class="slider__text">
-            Залезть в долговую яму стало проще! Кредитные консультанты придут вам на помощь.</p>
-          <a class="button slider__button" href="">Отправить заявку</a>
+        <div class="servises__wrapper">
+          <div class="servises__controls">
+            <button type="button">Доставка</button>
+            <button type="button">Гарантия</button>
+            <button type="button" class="servises__controls-current">Кредит</button>
+          </div>
+          <ul>
+            <li class="servises__delivery slider">
+              <h3 class="slider__title">Доставка</h3>
+              <p class="slider__text">
+                Мы с удовольствием доставим ваш товар прямо
+                к вашему подъезду совершенно бесплатно!
+                Ведь мы неплохо заработаем,
+                поднимая его на ваш этаж!
+              </p>
+            </li>
+            <li class="servises__guarantees slider">
+              <h3 class="slider__title">Гарантия</h3>
+              <p class="slider__text">
+                Если купленный у нас товар поломается или заискрит, а также в случае пожара, спровоцированного его
+                возгоранием, вы всегда можете быть уверены в нашей гарантии. Мы обменяем сгоревший товар на новый. Дом
+                уж
+                восстановите как-нибудь сами.
+              </p>
+            </li>
+            <li class="servises__kredit slider current-servise">
+              <h3 class="slider__title">Кредит</h3>
+              <p class="slider__text">
+                Залезть в долговую яму стало проще! <br> Кредитные консультанты придут вам на помощь.</p>
+              <a class="button slider__button" href="">Отправить заявку</a>
+            </li>
+          </ul>
         </div>
       </div>
     </section>
@@ -299,14 +300,11 @@
           <p class="about-us__text">Мы можем доставить ваш товар в самые отдаленные точки России!<br />
             Техномарт работает со многими транспортными компаниями:</p>
           <ul class="about-us__list">
-            <li class="about-us__item">
-              <p>Деловые линии</p>
+            <li class="about-us__item">Деловые линии
             </li>
-            <li class="about-us__item">
-              <p>Автотрейдинг</p>
+            <li class="about-us__item">Автотрейдинг
             </li>
-            <li class="about-us__item">
-              <p>ЖелДорЭкспедиция</p>
+            <li class="about-us__item">ЖелДорЭкспедиция
             </li>
           </ul>
           <a class="button about-us__button" href="">Подробнее о компании</a>
