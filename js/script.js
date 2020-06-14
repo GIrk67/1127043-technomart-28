@@ -32,11 +32,15 @@ writeLink.addEventListener("click", function (evt) {
 writeClose.addEventListener("click", function (evt) {
   evt.preventDefault();
   writePopup.classList.remove("modal__show");
+  writePopup.classList.remove("modal__error");
 });
 
 writeForm.addEventListener("submit", function (evt) {
   if (!writeLogin.value || !writeEmail.value) {
     evt.preventDefault();
+    writePopup.classList.remove("modal__error");
+    writePopup.offsetWidth = writePopup.offsetWidth;
+    writePopup.classList.add("modal__error");
   } else {
     localStorage.setItem("login", writeLogin.value);
   }
@@ -47,6 +51,7 @@ window.addEventListener("keydown", function (evt) {
     if (writePopup.classList.contains("modal__show")) {
       evt.preventDefault();
       writePopup.classList.remove("modal__show");
+      writePopup.classList.remove("modal__error");
     }
   }
 });
