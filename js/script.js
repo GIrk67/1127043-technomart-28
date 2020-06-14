@@ -46,12 +46,44 @@ writeForm.addEventListener("submit", function (evt) {
   }
 });
 
+var mapLink = document.querySelector(".contacts__image");
+
+var mapPopup = document.querySelector(".modal__map");
+var mapClose = mapPopup.querySelector(".modal__button-close");
+
+mapLink.addEventListener("click", function (evt) {
+  evt.preventDefault();
+  mapPopup.classList.add("modal__show");
+});
+
+mapClose.addEventListener("click", function (evt) {
+  evt.preventDefault();
+  mapPopup.classList.remove("modal__show");
+});
+
+var basketLink = document.querySelector(".product__basket");
+
+var basketPopup = document.querySelector(".modal__basket");
+var basketClose = basketPopup.querySelector(".modal__button-close");
+
+basketLink.addEventListener("click", function (evt) {
+  evt.preventDefault();
+  basketPopup.classList.add("modal__show");
+});
+
+basketClose.addEventListener("click", function (evt) {
+  evt.preventDefault();
+  basketPopup.classList.remove("modal__show");
+});
+
 window.addEventListener("keydown", function (evt) {
   if (evt.keyCode === 27) {
     if (writePopup.classList.contains("modal__show")) {
       evt.preventDefault();
       writePopup.classList.remove("modal__show");
       writePopup.classList.remove("modal__error");
+      mapPopup.classList.remove("modal__show");
+      basketPopup.classList.remove("modal__show");
     }
   }
 });

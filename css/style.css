@@ -2102,7 +2102,6 @@ input[type="radio"].visually-hidden {
 }
 
 .modal__basket {
-  display: none;
   width: 620px;
   height: 282px;
   background-color: var(--basic-white);
