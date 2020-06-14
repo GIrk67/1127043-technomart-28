@@ -1977,6 +1977,7 @@ input[type="radio"].visually-hidden {
   bottom: 0;
   left: 0;
   margin: auto;
+  display: none;
   font-weight: normal;
   font-size: 18px;
   line-height: 24px;
@@ -1985,6 +1986,11 @@ input[type="radio"].visually-hidden {
 
   border-top: 7px solid var(--basic-red);
   box-shadow: 0 20px 40px var(--opacity-black-75);
+}
+
+.modal__show {
+  display: block;
+  animation: bounce 0.6s;
 }
 
 .modal__button-close {
@@ -2018,7 +2024,6 @@ input[type="radio"].visually-hidden {
 }
 
 .modal__write {
-  display: none;
   width: 620px;
   height: 430px;
   background-color: var(--basic-background);
@@ -2084,8 +2089,6 @@ input[type="radio"].visually-hidden {
 }
 
 .modal__map {
-  display: none;
-
   width: 943px;
   height: 449px;
   background-color: var(--basic-greylight);
@@ -2145,4 +2148,24 @@ input[type="radio"].visually-hidden {
 .modal__basket-continue:active {
   color: var(--basic-white);
   background-color: var(--basic-green);
+}
+
+/* Animations */
+
+@keyframes bounce {
+  0% {
+    transform: translateY(-2000px);
+  }
+
+  70% {
+    transform: translateY(30px);
+  }
+
+  90% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
 }
