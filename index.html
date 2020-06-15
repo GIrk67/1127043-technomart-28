@@ -129,6 +129,10 @@
         </div>
         <ul class="main-page__list product">
           <li class="product__item">
+            <div class="product__order-wrapper">
+              <a class="product__basket" href="">Купить</a>
+              <a class="product__marker" href="">В закладки</a>
+            </div>
             <div class="product__preview">
               <img src="img/snippet-32961.jpg" width="184" height="164" alt="Перфоратор BOSCH BFG 9000">
             </div>
@@ -139,10 +143,12 @@
               <p class="product__old-price">32500 р.</p>
               <button class="product__price" type="button">25500 р.</button>
             </div>
-            <button class="product__basket" type="button">Купить</button>
-            <button class="product__marker" type="button">В закладки</button>
           </li>
           <li class="product__item product__item--new">
+            <div class="product__order-wrapper">
+              <a class="product__basket" href="">Купить</a>
+              <a class="product__marker" href="">В закладки</a>
+            </div>
             <div class="product__preview">
               <img src="img/snippet-18927.jpg" width="127" height="112" alt="Перфоратор BOSCH BFG 3000">
             </div>
@@ -153,10 +159,12 @@
               <p class="product__old-price">22500 р.</p>
               <button class="product__price" type="button">15500 р.</button>
             </div>
-            <button class="product__basket" type="button">Купить</button>
-            <button class="product__marker" type="button">В закладки</button>
           </li>
           <li class="product__item">
+            <div class="product__order-wrapper">
+              <a class="product__basket" href="">Купить</a>
+              <a class="product__marker" href="">В закладки</a>
+            </div>
             <div class="product__preview">
               <img src="img/snippet-945.jpg" width="144" height="128" alt="Перфоратор BOSCH BFG 6000">
             </div>
@@ -167,10 +175,12 @@
               <p class="product__old-price">30500 р.</p>
               <button class="product__price" type="button">25500 р.</button>
             </div>
-            <button class="product__basket" type="button">Купить</button>
-            <button class="product__marker" type="button">В закладки</button>
           </li>
           <li class="product__item product__item--new product__item--notdiscount">
+            <div class="product__order-wrapper">
+              <a class="product__basket" href="">Купить</a>
+              <a class="product__marker" href="">В закладки</a>
+            </div>
             <div class="product__preview">
               <img src="img/snippet-18927.jpg" width="127" height="112" alt="Перфоратор BOSCH BFG 2000">
             </div>
@@ -181,8 +191,6 @@
               <p class="product__old-price">30500 р.</p>
               <button class="product__price" type="button">12500 р.</button>
             </div>
-            <button class="product__basket" type="button">Купить</button>
-            <button class="product__marker" type="button">В закладки</button>
           </li>
         </ul>
       </div>
@@ -423,6 +431,16 @@
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1223.2170949954987!2d30.323266364976924!3d59.93822633174437!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2s!4v1591906806308!5m2!1sru!2s"
         width="943" height="449" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
     </div>
+  </section>
+
+  <section class="modal modal__basket">
+    <h2 class="modal__basket-title">Товар добавлен в корзину!</h2>
+    <div class="modal__basket-button">
+      <button class="button modal__basket-order" type="submit">Оформить заказ</button>
+      <button class="button modal__basket-continue" type="button">Продолжить покупки</button>
+    </div>
+    <button class="modal__basket-close modal__button-close" type="button"><span class="visually-hidden">Закрыть
+        окно</span></button>
   </section>
 
   <script src="js/script.js"></script>

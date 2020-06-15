@@ -127,7 +127,7 @@ input[type="radio"].visually-hidden {
 }
 
 .inner-body .header {
-  margin-bottom: 21px;
+  margin-bottom: 18px;
 }
 
 .header__top-menu {
@@ -1221,10 +1221,15 @@ input[type="radio"].visually-hidden {
   border: none;
   padding-bottom: 25px;
   border-bottom: 1px solid var(--special-greylight);
-  margin-bottom: 12px;
+}
+
+.brands,
+.power {
+  padding-top: 14px;
 }
 
 .power {
+  margin-bottom: 16px;
   border-bottom: none;
 }
 
@@ -1234,13 +1239,12 @@ input[type="radio"].visually-hidden {
   font-weight: bold;
   font-size: 17px;
   line-height: 30px;
-
-  margin-bottom: 12px;
 }
 
 .price__range-filter {
   display: block;
   width: 220px;
+  margin-top: 12px;
 }
 
 .price__range-controls {
@@ -1306,7 +1310,7 @@ input[type="radio"].visually-hidden {
   border-radius: 5px;
   background-color: var(--special-greyred);
 
-  padding: 8px;
+  padding: 5px 8px;
 }
 
 .price-controls input {
@@ -1334,6 +1338,14 @@ input[type="radio"].visually-hidden {
   list-style: none;
 }
 
+.brands__list {
+  padding-top: 18px;
+}
+
+.power__list {
+  padding-top: 30px;
+}
+
 .brands__label,
 .power__label {
   position: relative;
@@ -1348,7 +1360,7 @@ input[type="radio"].visually-hidden {
 }
 
 .filters__item {
-  margin-bottom: 16px;
+  margin-bottom: 20px;
 }
 
 .filters__item:last-child {
@@ -1550,9 +1562,8 @@ input[type="radio"].visually-hidden {
   display: none;
 }
 
-.product__item:hover>.product__basket,
-.product__item:hover>.product__marker {
-  display: inherit;
+.product__item:hover>.product__order-wrapper {
+  display: block;
 }
 
 .product__preview {
@@ -1633,9 +1644,13 @@ input[type="radio"].visually-hidden {
   cursor: pointer;
 }
 
-.product__basket {
+.product__order-wrapper {
   display: none;
-  order: -2;
+  min-height: 156px;
+}
+
+.product__basket {
+  display: block;
   position: relative;
   padding: 10px 42px 10px 54px;
   margin-top: 14px;
@@ -1678,8 +1693,7 @@ input[type="radio"].visually-hidden {
 }
 
 .product__marker {
-  display: none;
-  order: -1;
+  display: block;
   font-family: "Cuprum", Arial, sans-serif;
   font-weight: normal;
   font-size: 14px;
@@ -2099,6 +2113,10 @@ input[type="radio"].visually-hidden {
   background-image: url(../img/big-map.png);
   background-position: 0 0;
   background-repeat: no-repeat;
+}
+
+.modal__map-link iframe {
+  border: none;
 }
 
 .modal__basket {
