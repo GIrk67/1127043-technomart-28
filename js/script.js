@@ -84,27 +84,28 @@ if (mapLink) {
 }
 
 
-var basketLink = document.querySelector(".product__basket");
+var basketLink = document.querySelectorAll(".product__basket");
 console.log(basketLink);
-var basketPopup = document.querySelector(".modal__basket");
-console.log(basketPopup);
-var basketClose = basketPopup.querySelector(".modal__button-close");
+basketLink.forEach(function (basketLink) {
+  var basketPopup = document.querySelector(".modal__basket");
+  var basketClose = basketPopup.querySelector(".modal__button-close");
 
-basketLink.addEventListener("click", function (evt) {
-  evt.preventDefault();
-  basketPopup.classList.add("modal__show");
-});
+  basketLink.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    basketPopup.classList.add("modal__show");
+  });
 
-basketClose.addEventListener("click", function (evt) {
-  evt.preventDefault();
-  basketPopup.classList.remove("modal__show");
-});
+  basketClose.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    basketPopup.classList.remove("modal__show");
+  });
 
-window.addEventListener("keydown", function (evt) {
-  if (evt.keyCode === 27) {
-    if (basketPopup.classList.contains("modal__show")) {
-      evt.preventDefault();
-      basketPopup.classList.remove("modal__show");
+  window.addEventListener("keydown", function (evt) {
+    if (evt.keyCode === 27) {
+      if (basketPopup.classList.contains("modal__show")) {
+        evt.preventDefault();
+        basketPopup.classList.remove("modal__show");
+      }
     }
-  }
+  });
 });
