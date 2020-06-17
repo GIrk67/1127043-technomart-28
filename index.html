@@ -13,7 +13,7 @@
 
 <body class="page-body">
   <header class="header">
-    <section class="header__top-menu top-menu">
+    <div class="header__top-menu top-menu">
       <div class="container">
         <div class="top-menu__wrapper">
           <a class="top-menu__logo">
@@ -35,9 +35,9 @@
           <a href="blank.html" class="top-menu__link top-menu__link--order">Оформить заказ</a>
         </div>
       </div>
-    </section>
+    </div>
 
-    <section class="header__main-menu main-menu">
+    <div class="header__main-menu main-menu">
       <div class="container">
         <div class="main-menu__wrapper">
           <p class="main-menu__sector main-menu__title">Интернет-магазин<br> строительных материалов<br> и инструментов
@@ -65,7 +65,7 @@
           </ul>
         </nav>
       </div>
-    </section>
+    </div>
   </header>
 
   <main class="main-page">
@@ -130,7 +130,7 @@
         <ul class="main-page__list product">
           <li class="product__item">
             <div class="product__order-wrapper">
-              <a class="product__basket" href="">Купить</a>
+              <a class="product__basket" href="basket.html">Купить</a>
               <a class="product__marker" href="">В закладки</a>
             </div>
             <div class="product__preview">
@@ -146,7 +146,7 @@
           </li>
           <li class="product__item product__item--new">
             <div class="product__order-wrapper">
-              <a class="product__basket" href="">Купить</a>
+              <a class="product__basket" href="basket.html">Купить</a>
               <a class="product__marker" href="">В закладки</a>
             </div>
             <div class="product__preview">
@@ -162,7 +162,7 @@
           </li>
           <li class="product__item">
             <div class="product__order-wrapper">
-              <a class="product__basket" href="">Купить</a>
+              <a class="product__basket" href="basket.html">Купить</a>
               <a class="product__marker" href="">В закладки</a>
             </div>
             <div class="product__preview">
@@ -178,7 +178,7 @@
           </li>
           <li class="product__item product__item--new product__item--notdiscount">
             <div class="product__order-wrapper">
-              <a class="product__basket" href="">Купить</a>
+              <a class="product__basket" href="basket.html">Купить</a>
               <a class="product__marker" href="">В закладки</a>
             </div>
             <div class="product__preview">
@@ -206,49 +206,41 @@
           <li class="maker__item">
             <a class="maker__link" href="">
               <img src="img/bosch.png" width="126" height="37" alt="логотип Bosch">
-              <span class="visually-hidden">Bosch</span>
             </a>
           </li>
           <li class="maker__item">
             <a class="maker__link" href="">
-              <img src="img/Makita.png" width="123" height="40" alt="логотип Makita">
-              <span class="visually-hidden">Makita</span>
+              <img src="img/makita.png" width="123" height="40" alt="логотип Makita">
             </a>
           </li>
           <li class="maker__item">
             <a class="maker__link" href="">
-              <img src="img/DeWALT.png" width="146" height="44" alt="логотип DeWalt">
-              <span class="visually-hidden">DeWalt</span>
+              <img src="img/dewalt.png" width="146" height="44" alt="логотип DeWalt">
             </a>
           </li>
           <li class="maker__item">
             <a class="maker__link" href="">
-              <img src="img/Interskol.png" width="200" height="88" alt="логотип Интерскол">
-              <span class="visually-hidden">Интерскол</span>
+              <img src="img/interskol.png" width="200" height="88" alt="логотип Интерскол">
             </a>
           </li>
           <li class="maker__item">
             <a class="maker__link" href="">
-              <img src="img/Hitachi.png" width="169" height="31" alt="логотип Hitachi">
-              <span class="visually-hidden">Hitachi</span>
+              <img src="img/hitachi.png" width="169" height="31" alt="логотип Hitachi">
             </a>
           </li>
           <li class="maker__item">
             <a class="maker__link" href="">
-              <img src="img/LG.png" width="121" height="73" alt="логотип LG">
-              <span class="visually-hidden">LG</span>
+              <img src="img/lg.png" width="121" height="73" alt="логотип LG">
             </a>
           </li>
           <li class="maker__item">
             <a class="maker__link" href="">
-              <img src="img/AEG.png" width="151" height="96" alt="логотип AEG">
-              <span class="visually-hidden">AEG</span>
+              <img src="img/aeg.png" width="151" height="96" alt="логотип AEG">
             </a>
           </li>
           <li class="maker__item">
             <a class="maker__link" href="">
-              <img src="img/Metabo.png" width="204" height="69" alt="логотип Metabo">
-              <span class="visually-hidden">Metabo</span>
+              <img src="img/metabo.png" width="204" height="69" alt="логотип Metabo">
             </a>
           </li>
         </ul>
@@ -264,17 +256,17 @@
         </p>
         <div class="servises__wrapper">
           <div class="servises__controls">
-            <button type="button">Доставка</button>
+            <button type="button" class="servises__controls-current">Доставка</button>
             <button type="button">Гарантия</button>
-            <button type="button" class="servises__controls-current">Кредит</button>
+            <button type="button">Кредит</button>
           </div>
           <ul>
-            <li class="servises__delivery slider">
+            <li class="servises__delivery slider current-servise">
               <h3 class="slider__title">Доставка</h3>
               <p class="slider__text">
-                Мы с удовольствием доставим ваш товар прямо
-                к вашему подъезду совершенно бесплатно!
-                Ведь мы неплохо заработаем,
+                Мы с удовольствием доставим ваш товар прямо <br>
+                к вашему подъезду совершенно бесплатно!<br>
+                Ведь мы неплохо заработаем,<br>
                 поднимая его на ваш этаж!
               </p>
             </li>
@@ -287,7 +279,7 @@
                 восстановите как-нибудь сами.
               </p>
             </li>
-            <li class="servises__kredit slider current-servise">
+            <li class="servises__kredit slider">
               <h3 class="slider__title">Кредит</h3>
               <p class="slider__text">
                 Залезть в долговую яму стало проще! <br> Кредитные консультанты придут вам на помощь.</p>
@@ -321,24 +313,24 @@
         <section class="main-page__contacts contacts">
           <h2 class="contacts__title">Контакты</h2>
           <p class="contacts__text">Вы можете забрать товар сами,<br /> заехав в наш офис:</p>
-          <a class="contacts__image" href="">
+          <a class="contacts__image" href="maps.html">
             <img src="img/map.png" width="300" height="158" alt="Карта расположения офиса">
           </a>
-          <a class="button contacts__button" href="">Заблудились? Напишите нам!</a>
+          <a class="button contacts__button" href="form.html">Заблудились? Напишите нам!</a>
         </section>
       </div>
     </div>
   </main>
 
   <footer class="footer">
-    <section class="footer__header header-footer">
+    <div class="footer__header header-footer">
       <div class="container">
         <div class="header-footer__column1">
           <a class="header-footer__logo">
             <img src="img/logo-technomart.svg" width="138" height="23" alt="Логотип магазина «Техномарт»">
           </a>
           <p class="header-footer__adress">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
-          <p class="header-footer__phone">+7 (812) 555-05-55</p>
+          <a class="header-footer__phone" href="tel:+78125550555">+7 (812) 555-05-55</a>
         </div>
         <div class="header-footer__column2">
           <ul class="header-footer__list">
@@ -356,9 +348,9 @@
           </ul>
         </div>
       </div>
-    </section>
+    </div>
 
-    <section class="footer__bottom bottom-footer">
+    <div class="footer__bottom bottom-footer">
       <div class="container">
         <p class="bottom-footer__copyright">© 2010–2019 Компания «Техномарт»<br> Все права защищены</p>
         <ul class="bottom-footer__socials-list socials">
@@ -392,7 +384,7 @@
           <a class="bottom-footer__creator-link" href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a>
         </div>
       </div>
-    </section>
+    </div>
   </footer>
 
   <section class="modal modal__write">
@@ -436,7 +428,7 @@
   <section class="modal modal__basket">
     <h2 class="modal__basket-title">Товар добавлен в корзину!</h2>
     <div class="modal__basket-button">
-      <button class="button modal__basket-order" type="submit">Оформить заказ</button>
+      <a class="button modal__basket-order" href="basket.html">Оформить заказ</a>
       <button class="button modal__basket-continue" type="button">Продолжить покупки</button>
     </div>
     <button class="modal__basket-close modal__button-close" type="button"><span class="visually-hidden">Закрыть

@@ -85,7 +85,6 @@ if (mapLink) {
 
 
 var basketLink = document.querySelectorAll(".product__basket");
-console.log(basketLink);
 basketLink.forEach(function (basketLink) {
   var basketPopup = document.querySelector(".modal__basket");
   var basketClose = basketPopup.querySelector(".modal__button-close");
@@ -109,3 +108,59 @@ basketLink.forEach(function (basketLink) {
     }
   });
 });
+
+// Slider promo
+
+var sliderBlock = document.querySelector(".promo__slider");
+var leftLink = document.querySelector(".slider__arrows-left");
+var rightLink = document.querySelector(".slider__arrows-right");
+var slide = document.querySelectorAll(".slide");
+var button = document.querySelector(".slider__controls");
+var buttonLink = button.querySelectorAll("[type=button]");
+
+var changeButton = function () {
+  var i = 0;
+  if (buttonLink[i].classList.contains("slider__controls-current")) {
+    buttonLink[i].classList.remove("slider__controls-current");
+    buttonLink[i + 1].classList.add("slider__controls-current");
+  } else {
+    buttonLink[i + 1].classList.remove("slider__controls-current");
+    buttonLink[i].classList.add("slider__controls-current");
+  }
+};
+
+var changeSlide = function () {
+  var i = 0;
+  if (sliderBlock.classList.contains("promo__slider--1") && slide[i].classList.contains("slide--current")) {
+    sliderBlock.classList.remove("promo__slider--1");
+    sliderBlock.classList.add("promo__slider--2");
+    slide[i].classList.remove("slide--current");
+    slide[i + 1].classList.add("slide--current");
+  } else {
+    sliderBlock.classList.remove("promo__slider--2");
+    sliderBlock.classList.add("promo__slider--1");
+    slide[i + 1].classList.remove("slide--current");
+    slide[i].classList.add("slide--current");
+  }
+};
+
+leftLink.addEventListener("click", function (evt) {
+  evt.preventDefault();
+  changeSlide();
+  changeButton();
+});
+
+rightLink.addEventListener("click", function (evt) {
+  evt.preventDefault();
+  changeSlide();
+  changeButton();
+});
+
+buttonLink.forEach(function (buttonLink) {
+  buttonLink.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    changeSlide();
+    changeButton();
+  });
+});
+
