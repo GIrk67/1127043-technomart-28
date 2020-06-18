@@ -83,7 +83,6 @@ if (mapLink) {
   });
 }
 
-
 var basketLink = document.querySelectorAll(".product__basket");
 basketLink.forEach(function (basketLink) {
   var basketPopup = document.querySelector(".modal__basket");
@@ -164,3 +163,45 @@ buttonLink.forEach(function (buttonLink) {
   });
 });
 
+// Slider servises
+
+var controls = document.querySelector(".servises__controls");
+var controlsDelivery = controls.querySelector(".servises__button--delivery");
+var controlsGuarantees = controls.querySelector(".servises__button--guarantees");
+var controlsCredit = controls.querySelector(".servises__button--сredit");
+var slideDelivery = document.querySelector(".servises__delivery");
+var slideGuarantees = document.querySelector(".servises__guarantees");
+var slideCredit = document.querySelector(".servises__credit");
+
+controlsDelivery.addEventListener("click", function (evt) {
+  evt.preventDefault();
+  slideDelivery.classList.add("current-servise");
+  slideGuarantees.classList.remove("current-servise");
+  slideCredit.classList.remove("current-servise");
+
+  controlsDelivery.classList.add("servises__controls-current");
+  controlsGuarantees.classList.remove("servises__controls-current");
+  controlsCredit.classList.remove("servises__controls-current");
+});
+
+controlsGuarantees.addEventListener("click", function (evt) {
+  evt.preventDefault();
+  slideDelivery.classList.remove("current-servise");
+  slideGuarantees.classList.add("current-servise");
+  slideCredit.classList.remove("current-servise");
+
+  controlsDelivery.classList.remove("servises__controls-current");
+  controlsCredit.classList.remove("servises__controls-current");
+  controlsGuarantees.classList.add("servises__controls-current");
+});
+
+controlsCredit.addEventListener("click", function (evt) {
+  evt.preventDefault();
+  slideDelivery.classList.remove("current-servise");
+  slideGuarantees.classList.remove("current-servise");
+  slideCredit.classList.add("current-servise");
+
+  controlsDelivery.classList.remove("servises__controls-current");
+  controlsGuarantees.classList.remove("servises__controls-current");
+  controlsCredit.classList.add("servises__controls-current");
+});
