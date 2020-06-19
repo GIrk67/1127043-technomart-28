@@ -1178,11 +1178,13 @@ input[type="radio"].visually-hidden {
 }
 
 .servises__delivery {
+  min-height: 288px;
   background-image: url(../img/delivery.png);
   background-position: 150px 20px;
 }
 
 .servises__guarantees {
+
   background-image: url(../img/guarantees.png);
   background-position: 230px 0;
 }
